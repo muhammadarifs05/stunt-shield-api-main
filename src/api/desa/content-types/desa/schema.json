@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "desas",
+  "info": {
+    "singularName": "desa",
+    "pluralName": "desas",
+    "displayName": "Desa",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "posyandus": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::posyandu.posyandu",
+      "mappedBy": "desa"
+    }
+  }
+}

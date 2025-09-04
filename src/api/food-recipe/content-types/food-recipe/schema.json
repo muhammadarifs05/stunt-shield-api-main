@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "food_recipes",
+  "info": {
+    "singularName": "food-recipe",
+    "pluralName": "food-recipes",
+    "displayName": "Food Recipe",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "ingredients": {
+      "type": "json"
+    },
+    "steps": {
+      "type": "json"
+    },
+    "nutritions": {
+      "type": "json"
+    },
+    "nutrition_info_source": {
+      "type": "string"
+    },
+    "large_portion": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "recipe_source": {
+      "type": "string"
+    },
+    "age": {
+      "type": "string"
+    },
+    "favorites": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::favorite.favorite",
+      "mappedBy": "recipes"
+    },
+    "location": {
+      "type": "enumeration",
+      "enum": [
+        "Artikel",
+        "Infografis",
+        "Poster",
+        "Resep"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Ibu Hamil",
+        "Balita"
+      ]
+    }
+  }
+}

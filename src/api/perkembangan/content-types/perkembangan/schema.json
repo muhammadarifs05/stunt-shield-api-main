@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "perkembangans",
+  "info": {
+    "singularName": "perkembangan",
+    "pluralName": "perkembangans",
+    "displayName": "Perkembangan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "tanggal_ukur": {
+      "type": "date"
+    },
+    "berat_badan": {
+      "type": "decimal"
+    },
+    "tinggi_badan": {
+      "type": "decimal"
+    },
+    "cara_ukur": {
+      "type": "enumeration",
+      "enum": [
+        "Berdiri",
+        "Terlentang"
+      ]
+    },
+    "lingkar_lengan": {
+      "type": "decimal"
+    },
+    "lingkar_kepala": {
+      "type": "decimal"
+    },
+    "anak": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::anak.anak",
+      "inversedBy": "perkembangans"
+    }
+  }
+}

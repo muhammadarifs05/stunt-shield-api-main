@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "anaks",
+  "info": {
+    "singularName": "anak",
+    "pluralName": "anaks",
+    "displayName": "Anak",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "anak_ke": {
+      "type": "integer"
+    },
+    "nik": {
+      "type": "string"
+    },
+    "no_kk": {
+      "type": "string"
+    },
+    "tanggal_lahir": {
+      "type": "date"
+    },
+    "jenis_kelamin": {
+      "type": "enumeration",
+      "enum": [
+        "Laki-laki",
+        "Perempuan"
+      ]
+    },
+    "berat_lahir": {
+      "type": "decimal"
+    },
+    "panjang_lahir": {
+      "type": "decimal"
+    },
+    "imd": {
+      "type": "boolean"
+    },
+    "nama_ortu": {
+      "type": "string"
+    },
+    "nik_ortu": {
+      "type": "string"
+    },
+    "no_hp_ortu": {
+      "type": "string"
+    },
+    "alamat": {
+      "type": "text"
+    },
+    "keterangan": {
+      "type": "richtext"
+    },
+    "perkembangans": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::perkembangan.perkembangan",
+      "mappedBy": "anak"
+    },
+    "posyandu": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::posyandu.posyandu",
+      "inversedBy": "anaks"
+    }
+  }
+}

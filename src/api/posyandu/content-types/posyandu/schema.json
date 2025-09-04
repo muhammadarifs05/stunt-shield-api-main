@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posyandus",
+  "info": {
+    "singularName": "posyandu",
+    "pluralName": "posyandus",
+    "displayName": "Posyandu",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "alamat": {
+      "type": "text"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "posyandu"
+    },
+    "desa": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::desa.desa",
+      "inversedBy": "posyandus"
+    },
+    "anaks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::anak.anak",
+      "mappedBy": "posyandu"
+    }
+  }
+}

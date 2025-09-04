@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "info_graphics",
+  "info": {
+    "singularName": "info-graphic",
+    "pluralName": "info-graphics",
+    "displayName": "Info Graphic"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "source": {
+      "type": "string"
+    }
+  }
+}
