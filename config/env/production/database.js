@@ -8,7 +8,7 @@ module.exports = ({
       port: env.int("DATABASE_PORT", 6543),
       database: env("DATABASE_NAME", "postgres"),
       user: env("DATABASE_USERNAME", "postgres.uyebosoghilznktltdgu"),
-      password: env("DATABASE_PASSWORD", "YOUR_PASSWORD_HERE"),
+      password: env("DATABASE_PASSWORD", "Stuntshield%24123."),
       ssl: {
         // ini kunci supaya tidak error self-signed
         rejectUnauthorized: false,
