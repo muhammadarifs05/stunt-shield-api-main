@@ -1,14 +1,17 @@
-module.exports = ({ env }) => ({
+module.exports = ({
+  env
+}) => ({
   connection: {
     client: "postgres",
     connection: {
-      host: env("DATABASE_HOST", "127.0.0.1"),
-      port: env.int("DATABASE_PORT", 5432),
-      database: env("DATABASE_NAME", "strapi"),
-      user: env("DATABASE_USERNAME", "strapi"),
-      password: env("DATABASE_PASSWORD", "strapi"),
+      host: env("DATABASE_HOST", "aws-1-ap-southeast-1.pooler.supabase.com"),
+      port: env.int("DATABASE_PORT", 6543),
+      database: env("DATABASE_NAME", "postgres"),
+      user: env("DATABASE_USERNAME", "postgres.uyebosoghilznktltdgu"),
+      password: env("DATABASE_PASSWORD", "YOUR_PASSWORD_HERE"),
       ssl: {
-        rejectUnauthorized: env.bool("DATABASE_SSL_SELF", false),
+        // ini kunci supaya tidak error self-signed
+        rejectUnauthorized: false,
       },
     },
     debug: false,
